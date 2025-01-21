@@ -14,3 +14,7 @@ build:linux --sandbox_tmpfs_path=/tmp
 build:linux --experimental_convenience_symlinks=ignore
 test:linux --experimental_convenience_symlinks=ignore
 run:linux --experimental_convenience_symlinks=ignore
+
+# Use WFA Bazel registry.
+common --registry=https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main
+common --registry=https://bcr.bazel.build
