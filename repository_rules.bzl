@@ -132,7 +132,7 @@ def switched_rules_by_language(
     #
     rules["java_proto_library"] = _switch(
         java,
-        "native.java_proto_library",
+	"@com_google_protobuf//bazel:java_proto_library.bzl",
     )
     rules["java_grpc_library"] = _switch(
         java and grpc,
@@ -212,7 +212,7 @@ def switched_rules_by_language(
     #
     rules["cc_proto_library"] = _switch(
         cc,
-        "native.cc_proto_library",
+	"@com_google_protobuf//bazel:cc_proto_library.bzl",
     )
     rules["cc_grpc_library"] = _switch(
         cc and grpc,
