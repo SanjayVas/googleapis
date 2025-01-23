@@ -5,10 +5,12 @@ module(
 )
 
 bazel_dep(
+    a,
     name = "protobuf",
     version = "29.3",
     repo_name = "com_google_protobuf",
 )
+bazel_dep(name = "rules_proto", version = "7.1.0")
 
 imports = use_extension(":extensions.bzl", "imports")
 use_repo(imports, "com_google_googleapis_imports")
